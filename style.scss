@@ -1,0 +1,118 @@
+// @import "https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap";
+
+:root{
+    // BG COlORS 
+    --c-soft-blue: hsl(231, 69%, 60%);
+    --c-soft-red: hsl(0, 94%, 66%);
+
+    // TEXT COLORS 
+    --c-grayish-blue: hsl(229, 8%, 60%);
+    --c-very-dark-blue: hsl(229, 31%, 21%);
+
+}
+
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+    font-size: 1.8rem;
+    margin: 2.5rem 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: var(--c-very-dark-blue);
+
+}
+
+p{
+    color: var(--c-grayish-blue);
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+li{
+    list-style-type: none;
+}
+
+
+
+/////////////////
+// BTNS SECTION
+////////////////
+
+
+
+.header{
+    width: 90%;
+    max-width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &__logo{
+
+    }
+
+
+    &__nav{
+
+        display: flex;
+
+        &__item{
+            display: block;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: rgb(68, 68, 68);
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        &__btn{
+            color: #fff;
+            font-weight: 500;
+            padding: 1.2rem 4rem;
+            background-color: var(--c-soft-red);
+            border-radius: .5rem;
+            box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.35);
+        }
+
+    }
+
+}
+
+
+
+
+
+/////////////////
+// BTNS SECTION
+////////////////
+
+.btn{
+
+}
