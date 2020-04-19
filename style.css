@@ -217,4 +217,103 @@ img {
 .features__links__item {
   padding: 2rem 4rem;
 }
+
+.features__tab {
+  width: 90%;
+  max-width: 75%;
+  display: -ms-grid;
+  display: grid;
+  margin: 0 auto;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 8rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+}
+
+.features__tab__img {
+  position: relative;
+  margin-bottom: 15%;
+}
+
+.features__tab__img::after {
+  background: var(--c-soft-blue);
+  height: 75%;
+  width: 175%;
+  z-index: -11;
+  border-bottom-right-radius: 20rem;
+  border-top-right-radius: 20rem;
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  left: -100%;
+}
+
+.features__tab__text__heading {
+  font-size: 2.8rem;
+}
+
+.features__tab__text__para {
+  margin: 1.5rem 0 2rem;
+}
+
+.features__tab__text__btn {
+  padding: 1.2rem 2rem;
+}
+
+.download {
+  width: 90%;
+  max-width: 60%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (max-content)[3];
+      grid-template-columns: repeat(3, -webkit-max-content);
+      grid-template-columns: repeat(3, max-content);
+  gap: 8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.download__item {
+  text-align: center;
+  padding: 2rem;
+  background-image: url("images/bg-dots.svg");
+  background-repeat: no-repeat;
+  background-size: fill;
+  background-position: center 79%;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.2);
+}
+
+.download__item-2 {
+  margin-top: 3rem;
+}
+
+.download__item-3 {
+  margin-top: 6rem;
+}
+
+.download__item__img {
+  margin: 2rem 0;
+}
+
+.download__item__heading {
+  font-size: 2rem;
+}
+
+.download__item__para {
+  margin: 1rem 0 4rem 0;
+}
+
+.download__item__btn {
+  background-color: var(--c-soft-blue);
+}
 /*# sourceMappingURL=style.css.map */
