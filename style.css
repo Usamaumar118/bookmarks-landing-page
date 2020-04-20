@@ -26,7 +26,7 @@ html {
 
 body {
   font-size: 1.8rem;
-  margin: 2.5rem 0;
+  margin: 2.5rem 0 0 0;
   line-height: 1.5;
 }
 
@@ -107,11 +107,28 @@ input {
   color: #444444;
   padding: 1.2rem;
   margin: 2rem 1rem;
+  -webkit-transition: color .3s ease-in, -webkit-box-shadow .3s ease-in;
+  transition: color .3s ease-in, -webkit-box-shadow .3s ease-in;
+  transition: color .3s ease-in, box-shadow .3s ease-in;
+  transition: color .3s ease-in, box-shadow .3s ease-in, -webkit-box-shadow .3s ease-in;
+}
+
+.header__nav__item:hover {
+  color: var(--c-soft-red);
 }
 
 .header__nav__btn {
   margin-right: 0;
   background-color: var(--c-soft-red);
+  border: 2px solid transparent;
+}
+
+.header__nav__btn:hover {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: var(--c-soft-red);
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .btn {
@@ -156,7 +173,7 @@ input {
 }
 
 .hero__btn {
-  max-width: 18rem;
+  max-width: 19rem;
 }
 
 .hero__btn--blue {
@@ -164,12 +181,32 @@ input {
   background-color: var(--c-soft-blue);
   -webkit-box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.2rem 0.3rem rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+.hero__btn--blue:hover {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: var(--c-soft-blue);
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .hero__btn--white {
   color: var(--c-very-dark-blue);
   -webkit-box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.25);
           box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.25);
+  border: 2px solid transparent;
+}
+
+.hero__btn--white:hover {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: var(--c-very-dark-blue);
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .hero__img {
@@ -217,10 +254,16 @@ input {
       grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
 }
 
 .features__links__item {
   padding: 2rem 4rem;
+}
+
+.features__links__item:hover {
+  color: var(--c-soft-red);
 }
 
 .features__tab {
@@ -320,6 +363,17 @@ input {
 
 .download__item__btn {
   background-color: var(--c-soft-blue);
+  border: 2px solid transparent;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+.download__item__btn:hover {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: var(--c-soft-blue);
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .faq {
@@ -435,6 +489,13 @@ input {
   padding: 1.5rem;
   border-radius: .5rem;
   border: none;
+  border: 2px solid transparent;
+  outline: none;
+  position: relative;
+}
+
+.cta__content__form--input:focus {
+  border: 2px solid var(--c-soft-red);
 }
 
 .cta__content__form--btn {
@@ -442,6 +503,17 @@ input {
   border: none;
   padding: 1.5rem 0;
   cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.cta__content__form--btn:hover {
+  border: 2px solid currentColor;
+  background-color: transparent;
+  color: #fff;
+  -webkit-box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
 .footer {
@@ -474,6 +546,12 @@ input {
   font-size: 1.2rem;
   color: #fff;
   font-weight: 400;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+.footer__content__nav__item:hover {
+  color: var(--c-soft-red);
 }
 
 .footer__content__social {
@@ -484,13 +562,13 @@ input {
 
 .footer__content__social__item {
   margin-right: 2rem;
+  -webkit-transition: fill .3s ease-in;
+  transition: fill .3s ease-in;
 }
 
-.footer__content__social__item--fb:hover {
-  fill: #395693;
-}
-
-.footer__content__social__item--twitter:hover {
-  fill: #1C9CEA;
+.footer__content__social__item--svg:hover {
+  -webkit-transition: fill .3s ease-in;
+  transition: fill .3s ease-in;
+  fill: var(--c-soft-red);
 }
 /*# sourceMappingURL=style.css.map */
