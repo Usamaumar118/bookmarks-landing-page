@@ -443,4 +443,54 @@ input {
   padding: 1.5rem 0;
   cursor: pointer;
 }
+
+.footer {
+  background-color: var(--c-very-dark-blue);
+  padding: 1.5rem 0 1rem;
+}
+
+.footer__content {
+  width: 90%;
+  max-width: 75%;
+  color: #fff;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: max-content  1fr max-content;
+      grid-template-columns: -webkit-max-content  1fr -webkit-max-content;
+      grid-template-columns: max-content  1fr max-content;
+  gap: 5rem;
+}
+
+.footer__content__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__content__nav__item {
+  margin: 0 2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.footer__content__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__content__social__item {
+  margin-right: 2rem;
+}
+
+.footer__content__social__item--fb:hover {
+  fill: #395693;
+}
+
+.footer__content__social__item--twitter:hover {
+  fill: #1C9CEA;
+}
 /*# sourceMappingURL=style.css.map */
