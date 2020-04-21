@@ -194,53 +194,30 @@ input{
 
 
 .hero{ 
-    border: 1px solid red;
-    // width: 100%;
     margin-left: 10%;
-
-    position: relative;
-    &::after{
-        background: var(--c-soft-blue);
-        height: 45%;
-        width: 40%;
-        z-index: -11;
-        border-bottom-left-radius: 20rem;
-        border-top-left-radius: 20rem;
-
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
-
-        @media only screen and (max-width: 46.875em) {
-            height: 20%;
-            width: 60%;
-            bottom: 63%;
-        }
-    }
-
-
-    &__content{
-        border: 1px solid blue;
-        width: 90%;
-    display: flex;
-    @media only screen and (max-width: 56.25em) {
-        flex-direction: column-reverse;
-    }
+    border: 1px solid blue;
+    display: grid;
+    grid-template-columns: 40% 1fr;
     align-items: center;
     padding: 5rem 0;
+    gap: 5rem;
 
-        
 
-        
+    @media only screen and (max-width: 46.875em) {
+        grid-template-columns: 1fr;
     }
+
 
     &__text{
         width: 90%;
         @media only screen and (max-width: 56.25em) {
             text-align: center;
 
+        }
+
+        @media only screen and (max-width: 46.875em) {
+            grid-row: 2 / 3;
+            margin-right: 10%;
         }
 
 
@@ -301,12 +278,30 @@ input{
 
 
 
-    // &__img{ 
-        
-    //     flex: 60%;
+    &__img{ 
+        border: 1px solid green;
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: start;
 
 
-    // }
+        &::after{
+            background: var(--c-soft-blue);
+            height: 55%;
+            width: 80%;
+            z-index: -11;
+            border-bottom-left-radius: 20rem;
+            border-top-left-radius: 20rem;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+
+        }
+
+
+    }
 
 
 }
@@ -391,7 +386,7 @@ input{
 
             &::after{
                 background: var(--c-soft-blue);
-                height: 75%;
+                height: 85%;
                 width: 175%;
                 z-index: -11;
                 border-bottom-right-radius: 20rem;
