@@ -103,6 +103,7 @@ input{
 .active-link{
     color: var(--c-very-dark-blue);
     border-bottom: 4px solid var(--c-soft-red);
+    border-top: 4px solid transparent
 }
 
 
@@ -191,6 +192,10 @@ input{
     padding: 1.2rem 2.4rem ;
     border-radius: .5rem;
     box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.35);
+    
+    @media only screen and (max-width: 28.125em) {
+           font-size: 1.4rem;
+    }
 
 
 }
@@ -254,9 +259,6 @@ input{
 
     &__btn{
 
-        @media only screen and (max-width: 28.125em) {
-           
-        }
 
         &--blue{
             margin-right: 1rem;
@@ -346,23 +348,34 @@ input{
         justify-items: center;
         border-bottom: 1px solid rgba(0, 0, 0, .2);
         transition: color .3s ease-in;
-        padding: 2rem 4rem;
+        // padding: 2rem 4rem;
         @media only screen and (max-width: 46.875em) {
             grid-template-columns: 1fr;
+            width: 90%;
         }
     
 
         &__item{
+            padding: 2rem 2.5rem;
+            font-size: 1.4rem;
+            display: block;
+            text-align: center;
+            border-top: 4px solid transparent;
+
             
 
             @media only screen and (max-width: 46.875em) {
-                margin-top: 1rem;
+                // margin-top: 1rem;
                 display: block;
                 padding: 2rem 4rem;
+                width: 75%;
+                margin: 0 auto;
             }
             &__wrapper{
+                border-bottom: -4px solid transparent;
                 
                 @media only screen and (max-width: 46.875em) {
+                    width: 100%;
                     border-top: 1px solid rgba(0, 0, 0, .2);
                 }
             }
@@ -599,6 +612,11 @@ input{
         &__form{
             display: grid;
             grid-template-columns: calc(80% - 2rem) 20%;
+
+            @media only screen and (max-width: 46.875em){
+                grid-template-columns: 1fr;
+            }
+
             gap: 2rem;
             align-items: center;
             font-size: 1.4rem;
