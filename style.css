@@ -44,7 +44,7 @@ html {
 
 @media only screen and (max-width: 28.125em) {
   html {
-    font-size: 48%;
+    font-size: 50%;
   }
 }
 
@@ -66,6 +66,12 @@ h6 {
 p {
   color: var(--c-grayish-blue);
   font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 28.125em) {
+  p {
+    font-size: 1.6rem;
+  }
 }
 
 a {
@@ -215,9 +221,15 @@ input {
 }
 
 .hero__text__heading {
-  font-size: 5rem;
+  font-size: 4.8rem;
   margin-bottom: 3rem;
   line-height: 1;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .hero__text__heading {
+    font-size: 4rem;
+  }
 }
 
 .hero__text__para {
@@ -228,8 +240,6 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -281,18 +291,15 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .hero__img::after {
   background: var(--c-soft-blue);
   height: 55%;
-  width: 80%;
+  width: 60%;
   z-index: -11;
   border-bottom-left-radius: 20rem;
   border-top-left-radius: 20rem;
@@ -311,7 +318,7 @@ input {
 
 .section-intro__heading {
   margin: 0 0 1.5rem 0;
-  font-size: 2.8rem;
+  font-size: 3rem;
 }
 
 .features {
@@ -359,8 +366,7 @@ input {
 }
 
 .features__tab {
-  width: 90%;
-  max-width: 75%;
+  width: 75%;
   display: -ms-grid;
   display: grid;
   margin: 0 auto;
@@ -371,6 +377,13 @@ input {
       -ms-flex-align: center;
           align-items: center;
   padding: 5rem 0;
+}
+
+@media only screen and (max-width: 28.125em) {
+  .features__tab {
+    width: 90%;
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 56.25em) {
