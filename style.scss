@@ -447,7 +447,6 @@ input{
 
 .download{
     width: 90%;
-    max-width: 60%;
     margin: 5rem auto;
 
     display: grid;
@@ -457,7 +456,7 @@ input{
     align-items: start;
 
     @media only screen and (max-width: 56.25em) {
-        grid-template-columns: max-content;
+        grid-template-columns: 90%;
     }
 
 
@@ -467,7 +466,7 @@ input{
         background-image: url('images/bg-dots.svg') ;
         background-repeat: no-repeat;
         background-size: fill;
-        background-position: center 79%;
+        background-position: center 76%;
         border-radius: 1rem;
         box-shadow: 0px 7px 18px 0px rgba(0,0,0,0.20);
         @media only screen and (max-width: 56.25em) {
@@ -503,6 +502,7 @@ input{
             background-color: var(--c-soft-blue);
             border: 2px solid transparent;
             transition: color .3s ease-in;
+            display: block;
 
             &:hover{
                 border: 2px solid currentColor;
@@ -522,6 +522,11 @@ input{
     margin: 10rem auto;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 56.25em) {
+        width: 90%;
+    }
+
 
 
     &__container{

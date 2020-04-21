@@ -446,7 +446,6 @@ input {
 
 .download {
   width: 90%;
-  max-width: 60%;
   margin: 5rem auto;
   display: -ms-grid;
   display: grid;
@@ -464,9 +463,8 @@ input {
 
 @media only screen and (max-width: 56.25em) {
   .download {
-    -ms-grid-columns: max-content;
-        grid-template-columns: -webkit-max-content;
-        grid-template-columns: max-content;
+    -ms-grid-columns: 90%;
+        grid-template-columns: 90%;
   }
 }
 
@@ -476,7 +474,7 @@ input {
   background-image: url("images/bg-dots.svg");
   background-repeat: no-repeat;
   background-size: fill;
-  background-position: center 79%;
+  background-position: center 76%;
   border-radius: 1rem;
   -webkit-box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 7px 18px 0px rgba(0, 0, 0, 0.2);
@@ -525,6 +523,7 @@ input {
   border: 2px solid transparent;
   -webkit-transition: color .3s ease-in;
   transition: color .3s ease-in;
+  display: block;
 }
 
 .download__item__btn:hover {
@@ -545,6 +544,12 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .faq {
+    width: 90%;
+  }
 }
 
 .faq__container {
