@@ -202,7 +202,7 @@ input {
 
 .hero__content {
   border: 1px solid blue;
-  width: 80%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
