@@ -523,6 +523,8 @@ input{
     display: flex;
     flex-direction: column;
 
+
+
     @media only screen and (max-width: 56.25em) {
         width: 90%;
     }
@@ -570,6 +572,9 @@ input{
         &--text{
             font-size: 1.8rem;
             line-height: 2;
+
+
+
         }   
     }
 
@@ -589,6 +594,8 @@ input{
     width: 100%;
     color: #fff;
     padding: 5rem 0 8rem;
+
+    
 
     &__content{
         width: 90%;
@@ -628,24 +635,37 @@ input{
 
             &--input{
                 padding: 1.5rem;
+                display: block;
+                width: 100%;
                 border-radius: .5rem;
                 border: none;
                 border: 2px solid transparent;
                 outline: none;
-
+                
+                
+                &-container{
+                    position: relative;
+                    z-index: 10;
 
                 &::before{
-                    content: "rgus us ";
-                    width: 150px;
-                    height: 150px;
-                    background-color: red;
-                    border: 2px solid green;
+                    text-align: left;
+                    padding: 6rem 1rem .5rem;
+                    font-weight: 500;
+                    font-size: 1.2rem;
+                    content: "Whoops! Make sure its an email.";
+                    font-style: italic;
+                    width: calc(100% + 4px);
+                    display: block;
+                    background-color: var(--c-soft-red);
                     position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    z-index: 333;
+                    top: -2px;
+                    left: -2px;
+                    z-index: -2;
+                    border-radius: .5rem;
+               
+                
                 }
-
+            }
 
                 &:focus{
                     border: 2px solid var(--c-soft-red);
@@ -659,6 +679,7 @@ input{
                 cursor: pointer;
                 border: 2px solid transparent;
                 transition: all .3s ease-in;
+                
 
                 &:hover{
                     border: 2px solid currentColor;
@@ -673,6 +694,12 @@ input{
 
 }
 
+
+.error-icon{
+    position: absolute;
+    top: 2rem;
+    right: 5rem;
+}
 
 .footer{
     background-color: var(--c-very-dark-blue);
@@ -695,7 +722,6 @@ input{
     }
 
     gap: 5rem;
-
 
 
 
@@ -744,3 +770,9 @@ input{
      }
 }
 }
+
+
+.error-icon{
+    position: absolute;
+left: 0;
+top: 0;}
