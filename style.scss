@@ -588,6 +588,27 @@ input{
 }
 
 
+.error-icon{
+    position: absolute;
+    right: 1rem;
+    top: 1.5rem;
+    visibility: hidden;
+}
+.error-msg{
+    position: absolute;
+    text-align: left;
+    padding: .8rem 1.2rem ;
+    font-weight: 500;
+    font-size: 1.4rem;
+    font-style: italic;
+    width: 100%;
+    visibility: hidden;
+    background-color: var(--c-soft-red);
+    z-index: 1;
+    border-bottom-right-radius: .5rem;
+    border-bottom-left-radius: .5rem;
+}
+
 
 .cta{
     background-color: var(--c-soft-blue);
@@ -608,7 +629,6 @@ input{
         &__p{
             margin: 1.5rem 0;
             font-size: 1.6rem;
-
             color: rgb(238, 238, 238);
             letter-spacing: 3px;
             word-spacing: 5px;
@@ -641,37 +661,12 @@ input{
                 border: none;
                 border: 2px solid transparent;
                 outline: none;
+                font-size: 1.6rem;
+                font-weight: 500;
                 
-                
-                &-container{
-                    position: relative;
-                    z-index: 10;
+              
 
-                &::before{
-                    text-align: left;
-                    padding: 6rem 1rem .5rem;
-                    font-weight: 500;
-                    font-size: 1.2rem;
-                    content: "Whoops! Make sure its an email.";
-                    font-style: italic;
-                    width: calc(100% + 4px);
-                    display: block;
-                    background-color: var(--c-soft-red);
-                    position: absolute;
-                    top: -2px;
-                    left: -2px;
-                    z-index: -2;
-                    border-radius: .5rem;
-               
-                
-                }
             }
-
-                &:focus{
-                    border: 2px solid var(--c-soft-red);
-                }
-            }
-
             &--btn{
                 background: var(--c-soft-red);
                 border: none;
@@ -691,15 +686,29 @@ input{
             }
         }
     }
+    
+}
 
+// EMAIL VALIDATION
+
+.cta__content__form--input-container {
+        position: relative;
+
+
+        &.error .error-icon{
+            visibility: visible;
+        }
+        &.error .error-msg{
+            visibility: visible;
+        }
+        &.error .cta__content__form--input{
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color: var(--c-soft-red);
+        }
 }
 
 
-.error-icon{
-    position: absolute;
-    top: 2rem;
-    right: 5rem;
-}
 
 .footer{
     background-color: var(--c-very-dark-blue);
@@ -770,9 +779,3 @@ input{
      }
 }
 }
-
-
-.error-icon{
-    position: absolute;
-left: 0;
-top: 0;}

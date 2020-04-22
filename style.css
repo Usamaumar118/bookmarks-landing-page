@@ -608,6 +608,28 @@ input {
       align-self: center;
 }
 
+.error-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  visibility: hidden;
+}
+
+.error-msg {
+  position: absolute;
+  text-align: left;
+  padding: .8rem 1.2rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-style: italic;
+  width: 100%;
+  visibility: hidden;
+  background-color: var(--c-soft-red);
+  z-index: 1;
+  border-bottom-right-radius: .5rem;
+  border-bottom-left-radius: .5rem;
+}
+
 .cta {
   background-color: var(--c-soft-blue);
   width: 100%;
@@ -664,32 +686,8 @@ input {
   border: none;
   border: 2px solid transparent;
   outline: none;
-}
-
-.cta__content__form--input-container {
-  position: relative;
-  z-index: 10;
-}
-
-.cta__content__form--input-container::before {
-  text-align: left;
-  padding: 6rem 1rem .5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  font-size: 1.2rem;
-  content: "Whoops! Make sure its an email.";
-  font-style: italic;
-  width: calc(100% + 4px);
-  display: block;
-  background-color: var(--c-soft-red);
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  z-index: -2;
-  border-radius: .5rem;
-}
-
-.cta__content__form--input:focus {
-  border: 2px solid var(--c-soft-red);
 }
 
 .cta__content__form--btn {
@@ -710,10 +708,22 @@ input {
           box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 
-.error-icon {
-  position: absolute;
-  top: 2rem;
-  right: 5rem;
+.cta__content__form--input-container {
+  position: relative;
+}
+
+.cta__content__form--input-container.error .error-icon {
+  visibility: visible;
+}
+
+.cta__content__form--input-container.error .error-msg {
+  visibility: visible;
+}
+
+.cta__content__form--input-container.error .cta__content__form--input {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-color: var(--c-soft-red);
 }
 
 .footer {
@@ -800,11 +810,5 @@ input {
   -webkit-transition: fill .3s ease-in;
   transition: fill .3s ease-in;
   fill: var(--c-soft-red);
-}
-
-.error-icon {
-  position: absolute;
-  left: 0;
-  top: 0;
 }
 /*# sourceMappingURL=style.css.map */
