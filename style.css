@@ -618,6 +618,8 @@ input {
 .error-msg {
   position: absolute;
   text-align: left;
+  -webkit-transition: position .3s ease;
+  transition: position .3s ease;
   padding: .8rem 1.2rem;
   font-weight: 500;
   font-size: 1.4rem;
@@ -628,6 +630,13 @@ input {
   z-index: 1;
   border-bottom-right-radius: .5rem;
   border-bottom-left-radius: .5rem;
+}
+
+@media only screen and (max-width: 46.875em) {
+  .error-msg {
+    padding: .3rem 1.2rem;
+    position: static;
+  }
 }
 
 .cta {
@@ -675,6 +684,7 @@ input {
   .cta__content__form {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    gap: .5rem;
   }
 }
 
@@ -696,8 +706,6 @@ input {
   padding: 1.5rem 0;
   cursor: pointer;
   border: 2px solid transparent;
-  -webkit-transition: all .3s ease-in;
-  transition: all .3s ease-in;
 }
 
 .cta__content__form--btn:hover {

@@ -18,7 +18,7 @@ function checkInputs(){
     } else if(!isEmail(emailValue)){
         setErrorFor(email, 'Whoops, make sure it\'s email')
     }else{
-        console.log('email is ok')
+        email.parentElement.classList = "cta__content__form--input-container";
     }
 
 }

@@ -597,6 +597,11 @@ input{
 .error-msg{
     position: absolute;
     text-align: left;
+    @media only screen and (max-width: 46.875em){
+        padding: .3rem 1.2rem ;
+        position: static;
+    }
+    transition: position .3s ease;
     padding: .8rem 1.2rem ;
     font-weight: 500;
     font-size: 1.4rem;
@@ -647,6 +652,7 @@ input{
 
             @media only screen and (max-width: 46.875em){
                 grid-template-columns: 1fr;
+                gap: .5rem;
             }
 
             gap: 2rem;
@@ -663,6 +669,7 @@ input{
                 outline: none;
                 font-size: 1.6rem;
                 font-weight: 500;
+
                 
               
 
@@ -673,8 +680,7 @@ input{
                 padding: 1.5rem 0;
                 cursor: pointer;
                 border: 2px solid transparent;
-                transition: all .3s ease-in;
-                
+               
 
                 &:hover{
                     border: 2px solid currentColor;
@@ -706,9 +712,8 @@ input{
             border-bottom-left-radius: 0;
             border-color: var(--c-soft-red);
         }
-}
 
-
+    }
 
 .footer{
     background-color: var(--c-very-dark-blue);
