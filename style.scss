@@ -102,16 +102,85 @@ input{
 
 .active-link{
     color: var(--c-very-dark-blue);
-    border-bottom: 4px solid var(--c-soft-red);
-    border-top: 4px solid transparent
+    border-bottom-color: var(--c-soft-red);
+    border-top: 4px solid transparent;
+    @media only screen and (max-width: 46.875em) {
+        width: 100%;
+        border-top: 1px solid rgba(0, 0, 0, .2);
+        border-bottom: -4px solid transparent;
+    }
 }
 
 
 
 /////////////////
-// BTNS SECTION
+// HEADER SECTION
 ////////////////
 
+
+.mobile-header{
+    width: 100%;
+    padding: 5%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    z-index: 11;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    background-color: rgba(#2F354F, .95);
+
+    &__nav{
+        margin-top: 8rem;
+
+        &:nth-last-of-type(){
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+        }
+
+       // border: 1px solid red;
+
+        &__item{
+            border-top: 1px solid rgba(192, 191, 191, 0.2);
+            display: block;
+            text-align: center;
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            color: #fff;
+            font-weight: 300;
+            padding: 1em 0;
+            text-transform: uppercase;
+
+            &--last{
+                border-bottom: 1px solid rgba(192, 191, 191, 0.2);
+            }
+        }
+
+        &__btn{
+            border: 4px solid #fff;
+            border-radius: 1rem;
+            padding: .5em 0;
+            margin-top: 2rem;
+            font-weight: 400;
+        }
+
+
+    }
+
+    &__social{
+        margin-bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &__item--1{
+            margin-right: 2rem;
+        }
+
+    }
+
+
+}
 
 
 .header{
@@ -121,10 +190,15 @@ input{
     align-items: center;
     justify-content: space-between;
 
+    &__logo{
+        z-index: 111;
+    }
+
 
 
     &__hamburger{
         display: none;
+        z-index: 111;
         @media only screen and (max-width: 46.875em) {
             display: block;
 
@@ -298,7 +372,7 @@ input{
         position: relative;
         display: flex;
         justify-content: center;
-
+        z-index: -1;
 
         &::after{
             background: var(--c-soft-blue);
@@ -360,8 +434,7 @@ input{
             font-size: 1.4rem;
             display: block;
             text-align: center;
-            border-top: 4px solid transparent;
-
+            border: 4px solid transparent;
             
 
             @media only screen and (max-width: 46.875em) {
@@ -372,11 +445,12 @@ input{
                 margin: 0 auto;
             }
             &__wrapper{
-                border-bottom: -4px solid transparent;
+                border: -4px solid transparent;
                 
                 @media only screen and (max-width: 46.875em) {
                     width: 100%;
                     border-top: 1px solid rgba(0, 0, 0, .2);
+                    border-bottom: -4px solid transparent;
                 }
             }
 
@@ -783,4 +857,9 @@ input{
          }
      }
 }
+}
+
+
+.features__links__item.active-link + .features__tab{
+    display: none;
 }
