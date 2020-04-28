@@ -101,14 +101,13 @@ input {
 .active-link {
   color: var(--c-very-dark-blue);
   border-bottom-color: var(--c-soft-red);
-  border-top: 4px solid transparent;
+  border-bottom: 4px solid red;
 }
 
 @media only screen and (max-width: 46.875em) {
   .active-link {
     width: 100%;
     border-top: 1px solid rgba(0, 0, 0, 0.2);
-    border-bottom: -4px solid transparent;
   }
 }
 
@@ -116,10 +115,8 @@ input {
   width: 100%;
   padding: 5%;
   height: 100vh;
-  position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  display: none;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -145,7 +142,7 @@ input {
   border-top: 1px solid rgba(192, 191, 191, 0.2);
   display: block;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   letter-spacing: 3px;
   color: #fff;
   font-weight: 300;
@@ -158,7 +155,7 @@ input {
 }
 
 .mobile-header__nav__btn {
-  border: 4px solid #fff;
+  border: 3px solid #fff;
   border-radius: 1rem;
   padding: .5em 0;
   margin-top: 2rem;
@@ -180,6 +177,12 @@ input {
 
 .mobile-header__social__item--1 {
   margin-right: 2rem;
+}
+
+.is-visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header {
@@ -443,7 +446,7 @@ input {
   font-size: 1.4rem;
   display: block;
   text-align: center;
-  border: 4px solid transparent;
+  border: 4px solid;
 }
 
 @media only screen and (max-width: 46.875em) {
@@ -660,7 +663,8 @@ input {
   cursor: pointer;
 }
 
-.faq__question:hover h3 {
+.faq__question:hover h3,
+.faq__question:active h3 {
   color: var(--c-soft-red);
 }
 
@@ -672,11 +676,21 @@ input {
   transition: color .3s ease-in;
 }
 
+.faq__arrow {
+  -webkit-transition: -webkit-transform .2s ease-in;
+  transition: -webkit-transform .2s ease-in;
+  transition: transform .2s ease-in;
+  transition: transform .2s ease-in, -webkit-transform .2s ease-in;
+}
+
 .faq__answer {
   padding: 1.5rem 0;
   -webkit-transition: all .3s ease-in;
   transition: all .3s ease-in;
   display: none;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
 }
 
 .faq__answer--text {
@@ -894,9 +908,12 @@ input {
 }
 
 .footer__content__social__item {
-  margin-right: 2rem;
   -webkit-transition: fill .3s ease-in;
   transition: fill .3s ease-in;
+}
+
+.footer__content__social__item--1 {
+  margin-right: 2rem;
 }
 
 .footer__content__social__item--svg:hover {
@@ -905,7 +922,10 @@ input {
   fill: var(--c-soft-red);
 }
 
-.features__links__item.active-link + .features__tab {
-  display: none;
+.expand {
+  display: block;
+  opacity: 1;
+  -webkit-transition: all .5s ease-in;
+  transition: all .5s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
