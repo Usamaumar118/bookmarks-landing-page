@@ -100,16 +100,7 @@ input{
 // JS CLASSES
 /////////////
 
-.active-link{
-    color: var(--c-very-dark-blue);
-    border-bottom-color: var(--c-soft-red);
-    border-bottom: 4px solid red;
-    @media only screen and (max-width: 46.875em) {
-        width: 100%;
-        border-top: 1px solid rgba(0, 0, 0, .2);
-        // border-bottom: -4px solid red;
-    }
-}
+
 
 
 
@@ -421,53 +412,6 @@ input{
     width: 90%;
     margin: 0 auto;
 
-    &__links{
-        max-width: 59.55rem;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        border-bottom: 1px solid rgba(0, 0, 0, .2);
-        transition: color .3s ease-in;
-        // padding: 2rem 4rem;
-        @media only screen and (max-width: 46.875em) {
-            grid-template-columns: 1fr;
-            width: 90%;
-        }
-    
-
-        &__item{
-            padding: 2rem 2.5rem;
-            font-size: 1.4rem;
-            display: block;
-            text-align: center;
-            border: 4px solid ;
-            
-
-            @media only screen and (max-width: 46.875em) {
-                // margin-top: 1rem;
-                display: block;
-                padding: 2rem 4rem;
-                width: 75%;
-                margin: 0 auto;
-            }
-            &__wrapper{
-                border: -4px solid transparent;
-                
-                @media only screen and (max-width: 46.875em) {
-                    width: 100%;
-                    border-top: 1px solid rgba(0, 0, 0, .2);
-                    border-bottom: -4px solid transparent;
-                }
-            }
-
-
-            &:hover{
-                color: var(--c-soft-red);
-            }
-        }
-    
-    }
 
     &__tab{
         width: 75%;
