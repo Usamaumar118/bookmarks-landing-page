@@ -40,62 +40,54 @@ function isEmail(email){
 }
 
 
-////    FEATURE BTN 
-
-const featureBtn1 = document.getElementById('features-btn-1')
-const featureBtn2 = document.getElementById('features-btn-2')
-const featureBtn3 = document.getElementById('features-btn-3')
-
-
-
-const feature1Content = '<div class="features__tab__img"><img src="images/illustration-features-tab-1.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Bookmark in one click</h1><p class="features__tab__text__para">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
-const feature2Content = '<div class="features__tab__img"><img src="images/illustration-features-tab-2.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Intelligent search</h1><p class="features__tab__text__para">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
-const feature3Content = '<div class="features__tab__img"><img src="images/illustration-features-tab-3.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Share your bookmarks</h1><p class="features__tab__text__para">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
-const featureTab  = document.querySelector('.features__tab')
+////    FEATURE BTNS
+const featureBtns = document.querySelectorAll('.features__links__item')
 
 //EVENT LISTENER
 
-featureBtn1.addEventListener('click', (e) => {
-    e.preventDefault()
-    addContent(feature1Content)
-    addClass(featureBtn1)
+featureBtns.forEach((val, index) => {
+    val.addEventListener('click', (e) => {
+        e.preventDefault()
+        const featureContent1 = '<div class="features__tab__img"><img src="images/illustration-features-tab-1.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Bookmark in one click</h1><p class="features__tab__text__para">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
+        const featureContent2 = '<div class="features__tab__img"><img src="images/illustration-features-tab-2.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Intelligent search</h1><p class="features__tab__text__para">Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
+        const featureContent3 = '<div class="features__tab__img"><img src="images/illustration-features-tab-3.svg" alt="Hero-Illustration"></div><div class="features__tab__text features__text__heading"><h1 class="features__tab__text__heading">Share your bookmarks</h1><p class="features__tab__text__para">Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p><a class="btn features__tab__text__btn hero__btn--blue" href="#">More Info</a></div>'
+        const featureContentArr = [featureContent1, featureContent2, featureContent3]
+        const btnID = val.id
+        const splitID = val.id.split('--')
+        const btnName = splitID[0]
+        const btnIDNumber = splitID[1]
+        const Content = featureContentArr[btnIDNumber]
 
+
+        addContent(Content)
+
+        //SORRY FOR THIS I DONT INTERNET RIGHT NOW :P
+
+        if (val === featureBtns[0]){
+            featureBtns[0].classList.add('active-link')
+            featureBtns[1].classList.remove('active-link')
+            featureBtns[2].classList.remove('active-link')
+        } else if (val === featureBtns[1]){
+            featureBtns[1].classList.add('active-link')
+            featureBtns[0].classList.remove('active-link')
+            featureBtns[2].classList.remove('active-link')
+        } else if (val === featureBtns[2]){
+            featureBtns[2].classList.add('active-link')
+            featureBtns[1].classList.remove('active-link')
+            featureBtns[0].classList.remove('active-link')
+        }
+
+    })
 })
 
-
-featureBtn2.addEventListener('click', (e) => {
-    e.preventDefault()
-    addContent(feature2Content)
-    addClass(featureBtn2)
-
-})
-
-featureBtn3.addEventListener('click', (e) => {
-    e.preventDefault()
-    addContent(feature3Content)
-    addClass(featureBtn1)
-
-})
 
 
 function addContent(content){
-
     document.getElementById("featureTab").innerHTML = ""
-
     if(featureTab.innerHTML === ''){
         featureTab.insertAdjacentHTML('afterbegin', content)
     }
 }
-
-// function addClass(btn) {
-//     console.log(btn)
-//     if(btn.classList = 'features__links__item'){
-//         btn.classList.add('active-link')
-//     }else if(btn.classList = 'active-link'){
-//         btn.classList.remove('active-link')
-//     }
-
-// }
 
 
 
@@ -136,7 +128,6 @@ const question = document.querySelectorAll('.faq__question')
 const questionArr = Array.from(question)
 
     questionArr.forEach((val, index) => {
-
         val.addEventListener('click', (e) => {
 
             const questionID = val.id

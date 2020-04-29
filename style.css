@@ -453,6 +453,12 @@ input {
   font-size: 1.4rem;
   font-weight: 500;
   padding: 1.5rem;
+  -webkit-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+.features__links__item:hover {
+  color: var(--c-soft-red);
 }
 
 @media only screen and (max-width: 37.5em) {
